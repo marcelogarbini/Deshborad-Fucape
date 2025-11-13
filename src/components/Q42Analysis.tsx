@@ -245,7 +245,7 @@ export const Q42Analysis = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-xl">
             <ThumbsDown className="w-5 h-5 text-red-500" />
-            (ii) O que menos gostam na empresa - Por ordem de importância
+            (ii) O que menos foi citado - Por ordem de menções
           </CardTitle>
           <p className="text-sm text-muted-foreground">Listagem identificada e ranqueada por frequência de menções</p>
         </CardHeader>
