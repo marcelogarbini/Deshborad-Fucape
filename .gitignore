@@ -11,6 +11,12 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.local
+.env.*.local
+
+# Arquivos de teste com API keys
+test-api-direct.js
 
 # Editor directories and files
 .vscode/*

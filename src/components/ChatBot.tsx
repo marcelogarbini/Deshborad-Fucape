@@ -51,7 +51,7 @@ export const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      // API Key - Usar apenas variável de ambiente
+      // API Key - Apenas de variável de ambiente (nunca hardcoded!)
       const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
 
       if (!apiKey || apiKey === "your_openai_api_key_here") {
@@ -76,7 +76,7 @@ export const ChatBot = () => {
           Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: "gpt-4o", // Modelo mais recente disponível
+          model: "gpt-4o", // Modelo mais recente disponível (GPT-5 ainda não foi lançado)
           messages: [
             {
               role: "system",
