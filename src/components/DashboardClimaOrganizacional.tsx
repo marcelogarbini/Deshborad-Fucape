@@ -22,7 +22,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Bem-Estar",
     media: 3.26,
-    dp: 0.82,
+    dp: 1.124428566,
     perguntas: [
       { id: 5, text: "Ambiente favorece bem-estar físico e emocional", media: 2.97, dp: 1.07 },
       { id: 6, text: "Equilíbrio vida profissional e pessoal", media: 3.90, dp: 0.91 },
@@ -32,7 +32,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Employer Branding",
     media: 3.74,
-    dp: 0.88,
+    dp: 0.876457089,
     perguntas: [
       { id: 8, text: "Tenho orgulho de trabalhar nesta empresa", media: 3.74, dp: 0.88 },
     ],
@@ -40,7 +40,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Sustentabilidade e Diversidade",
     media: 3.47,
-    dp: 0.87,
+    dp: 1.014875484,
     perguntas: [
       { id: 10, text: "Empresa valoriza a diversidade", media: 3.83, dp: 0.88 },
       { id: 11, text: "Sustentabilidade nas decisões da empresa", media: 3.25, dp: 0.98 },
@@ -50,7 +50,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Liderança",
     media: 3.30,
-    dp: 0.93,
+    dp: 1.15106475,
     perguntas: [
       { id: 13, text: "Líder acessível e aberto ao diálogo", media: 3.83, dp: 1.06 },
       { id: 14, text: "Líderes agem de acordo com o que dizem", media: 3.32, dp: 1.08 },
@@ -60,7 +60,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Processos e Organização",
     media: 3.52,
-    dp: 0.83,
+    dp: 1.030484605,
     perguntas: [
       { id: 16, text: "Processos internos claros e definidos", media: 3.41, dp: 1.03 },
       { id: 17, text: "Ferramentas e recursos adequados", media: 3.50, dp: 1.04 },
@@ -70,7 +70,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Educação Corporativa",
     media: 3.45,
-    dp: 0.85,
+    dp: 1.042454715,
     perguntas: [
       { id: 19, text: "Acesso a oportunidades de aprendizado", media: 3.48, dp: 1.04 },
       { id: 20, text: "Treinamentos são relevantes", media: 3.70, dp: 0.96 },
@@ -80,7 +80,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Estratégia e Objetivos",
     media: 3.68,
-    dp: 0.81,
+    dp: 1.019439679,
     perguntas: [
       { id: 22, text: "Sei como meu trabalho contribui", media: 4.02, dp: 0.79 },
       { id: 23, text: "Empresa compartilha metas e conquistas", media: 3.33, dp: 1.10 },
@@ -89,7 +89,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Comunicação Interna",
     media: 3.34,
-    dp: 0.89,
+    dp: 1.033625813,
     perguntas: [
       { id: 24, text: "Canais de comunicação são eficazes", media: 3.39, dp: 1.01 },
       { id: 25, text: "Recebo informações relevantes", media: 3.59, dp: 0.94 },
@@ -99,7 +99,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Saúde, Segurança e QVT",
     media: 3.56,
-    dp: 0.90,
+    dp: 1.094270499,
     perguntas: [
       { id: 27, text: "Empresa promove saúde dos colaboradores", media: 3.05, dp: 1.13 },
       { id: 28, text: "Condições de trabalho são seguras", media: 3.46, dp: 1.02 },
@@ -109,7 +109,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Carreira",
     media: 3.41,
-    dp: 0.92,
+    dp: 1.147866852,
     perguntas: [
       { id: 30, text: "Clareza sobre oportunidades de crescimento", media: 3.04, dp: 1.17 },
       { id: 31, text: "Sou valorizado na função atual", media: 3.09, dp: 1.15 },
@@ -119,7 +119,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Participação e Autonomia",
     media: 3.49,
-    dp: 0.84,
+    dp: 1.048519436,
     perguntas: [
       { id: 33, text: "Liberdade para tomar decisões", media: 3.14, dp: 1.08 },
       { id: 34, text: "Minhas ideias são consideradas", media: 3.14, dp: 1.04 },
@@ -129,7 +129,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Relações Interpessoais",
     media: 3.60,
-    dp: 0.80,
+    dp: 1.025329009,
     perguntas: [
       { id: 36, text: "Bom relacionamento com colegas", media: 4.08, dp: 0.80 },
       { id: 37, text: "Ambiente colaborativo e respeitoso", media: 3.58, dp: 1.03 },
@@ -139,7 +139,7 @@ const dadosFatores: Fator[] = [
   {
     fator: "Recompensas e Reconhecimento",
     media: 3.38,
-    dp: 0.86,
+    dp: 1.262694804,
     perguntas: [
       { id: 39, text: "Avaliação de resultados é clara", media: 3.46, dp: 1.08 },
       { id: 40, text: "Salário é justo", media: 2.24, dp: 1.17 },
@@ -163,6 +163,16 @@ const getTextColorForMean = (mean: number) => {
   if (mean >= 4.0) return "text-green-400";
   if (mean >= 3.0) return "text-yellow-400";
   return "text-red-400";
+};
+
+// Função para determinar a cor do desvio padrão
+// Verde: valores mais altos (acima de ~1.15) - maior variabilidade
+// Amarelo: valores na média (entre ~0.95 e ~1.15) - variabilidade média
+// Vermelho: valores muito abaixo da média (abaixo de ~0.95) - menor variabilidade
+const getTextColorForDP = (dp: number) => {
+  if (dp >= 1.15) return "text-green-400"; // Mais alto
+  if (dp >= 0.95) return "text-yellow-400"; // Na média
+  return "text-red-400"; // Muito abaixo
 };
 
 export const DashboardClimaOrganizacional = () => {
@@ -205,7 +215,7 @@ export const DashboardClimaOrganizacional = () => {
             </div>
             <div className="flex items-center justify-between gap-4">
               <span className="text-muted-foreground text-sm">Desvio Padrão:</span>
-              <span className="font-semibold text-foreground">{data.dp.toFixed(2)}</span>
+              <span className={`font-semibold ${getTextColorForDP(data.dp)}`}>{data.dp.toFixed(2)}</span>
             </div>
             <div className="pt-2 mt-2 border-t border-border/50">
               <div className="flex items-center gap-2">
@@ -410,7 +420,7 @@ export const DashboardClimaOrganizacional = () => {
                           <div className="flex items-center gap-3 text-xs text-muted-foreground">
                             <span className="flex items-center gap-1">
                               <span className="font-mono">σ:</span>
-                              <span className="font-semibold">{item.dp.toFixed(2)}</span>
+                              <span className={`font-semibold ${getTextColorForDP(item.dp)}`}>{item.dp.toFixed(2)}</span>
                             </span>
                             <span className="text-muted-foreground/50">•</span>
                             <span>{item.perguntas.length} pergunta{item.perguntas.length > 1 ? "s" : ""}</span>
