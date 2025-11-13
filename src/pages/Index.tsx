@@ -1,4 +1,5 @@
-import { Users, Briefcase, GraduationCap, BarChart3, Heart, FileText, Lightbulb, CheckCircle2, ExternalLink, AlertTriangle, BookOpen, TrendingUp, MessageSquare, Award, DollarSign, Target, Settings } from "lucide-react";
+import React from "react";
+import { Users, Briefcase, GraduationCap, BarChart3, Heart, FileText, Lightbulb, CheckCircle2, ExternalLink, AlertTriangle, BookOpen, TrendingUp, MessageSquare, Award, DollarSign, Target, Settings, Bot } from "lucide-react";
 import { StatCard } from "@/components/StatCard";
 import { DemographicCharts } from "@/components/DemographicCharts";
 import { TopSectors } from "@/components/TopSectors";
@@ -10,10 +11,14 @@ import { ActionPlan } from "@/components/ActionPlan";
 import { CommunicationPlan } from "@/components/CommunicationPlan";
 import { ActionTrackingDashboard } from "@/components/ActionTrackingDashboard";
 import { TerminalExample } from "@/components/TerminalExample";
+import { ChatBot } from "@/components/ChatBot";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const [activeTab, setActiveTab] = React.useState("sample-size");
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -35,6 +40,14 @@ const Index = () => {
               </h1>
               <p className="text-muted-foreground mt-2">Análise completa da pesquisa de clima - 2024</p>
             </div>
+            <Button
+              onClick={() => setActiveTab("iabot-aebes")}
+              variant="outline"
+              className="flex items-center gap-2"
+            >
+              <Bot className="w-5 h-5" />
+              IaBot AEBES
+            </Button>
           </div>
         </div>
       </header>
@@ -72,8 +85,8 @@ const Index = () => {
         </section>
 
         {/* Tabs para os Entregáveis */}
-        <Tabs defaultValue="sample-size" className="w-full">
-          <TabsList className="grid w-full grid-cols-10 mb-6">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <TabsList className="grid w-full grid-cols-11 mb-6">
             <TabsTrigger value="sample-size">
               1
             </TabsTrigger>
@@ -103,6 +116,10 @@ const Index = () => {
             </TabsTrigger>
             <TabsTrigger value="topic10">
               10
+            </TabsTrigger>
+            <TabsTrigger value="iabot-aebes" className="flex items-center gap-2">
+              <Bot className="w-4 h-4" />
+              IaBot
             </TabsTrigger>
           </TabsList>
 
@@ -671,6 +688,24 @@ const Index = () => {
               </p>
             </div>
             <TerminalExample />
+          </TabsContent>
+
+          {/* IaBot AEBES */}
+          <TabsContent value="iabot-aebes" className="space-y-6">
+            <div className="mb-4">
+              <h2 className="text-2xl font-semibold text-foreground flex items-center gap-2">
+                <Bot className="w-6 h-6" />
+                IaBot AEBES
+              </h2>
+              <p className="text-muted-foreground">
+                Assistente de IA para o Dashboard de Clima Organizacional
+              </p>
+            </div>
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardContent className="p-0">
+                <ChatBot />
+              </CardContent>
+            </Card>
           </TabsContent>
         </Tabs>
       </main>

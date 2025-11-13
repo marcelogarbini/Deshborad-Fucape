@@ -188,8 +188,11 @@ export const DashboardClimaOrganizacional = () => {
     setExpandedFatores(newExpanded);
   };
 
-  // Preparar dados para o gráfico de barras (manter ordem original)
-  const chartData = dadosFatores.map((item) => ({
+  // Ordenar fatores por média (decrescente - maior para menor)
+  const fatoresOrdenados = [...dadosFatores].sort((a, b) => b.media - a.media);
+
+  // Preparar dados para o gráfico de barras (ordenados por média)
+  const chartData = fatoresOrdenados.map((item) => ({
     name: item.fator,
     media: item.media,
     dp: item.dp,
@@ -388,7 +391,7 @@ export const DashboardClimaOrganizacional = () => {
           </div>
 
           <div className="space-y-4">
-            {dadosFatores.map((item) => {
+            {fatoresOrdenados.map((item) => {
               const percentage = (item.media / 5) * 100;
               const gradientClass = getColorForMean(item.media);
               const textColor = getTextColorForMean(item.media);
